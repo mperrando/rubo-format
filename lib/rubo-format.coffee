@@ -15,7 +15,7 @@ module.exports =
 
       atom.config.observe "rubo-format.path", (newCommand) ->
         console.log("rubo-format:","change rubocop path","new path:",newCommand)
-        command = newCommand if newCommand is not undefined
+        command = newCommand unless newCommand is undefined
 
 
       stdout = (output) ->
